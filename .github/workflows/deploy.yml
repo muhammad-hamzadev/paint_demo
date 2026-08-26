@@ -23,6 +23,9 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
