@@ -2392,6 +2392,36 @@ img[src$=".svg"] {
     border-radius: 10px !important;
   }
 
+  .product-card-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0.3rem !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .btn-card-primary,
+  .btn-card-secondary {
+    padding: 0.45rem 0.2rem !important;
+    font-size: 0.64rem !important;
+    font-weight: 800 !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 2px !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    line-height: 1 !important;
+  }
+
+  .btn-card-primary svg,
+  .btn-card-secondary svg {
+    width: 12px !important;
+    height: 12px !important;
+    margin-right: 2px !important;
+    flex-shrink: 0 !important;
+  }
+
   /* Room Visualizer Preview & Controls */
   .visualizer-container {
     padding: 0.6rem 0.5rem !important;
