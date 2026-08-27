@@ -1866,6 +1866,40 @@
   animation: scaleUp 0.3s ease;
 }
 
+.product-modal-grid {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+}
+
+.product-modal-image-col {
+  background: #F8FAFC;
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 280px;
+}
+
+.product-modal-image-col img {
+  max-height: 320px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.product-modal-title {
+  font-size: 1.75rem;
+}
+
+.product-modal-option-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 @keyframes scaleUp {
   from {
     transform: scale(0.95);
@@ -2604,20 +2638,70 @@ img[src$=".svg"] {
     justify-content: center !important;
   }
 
-  /* Modal Dialogs */
+  /* Modal Dialogs Mobile Responsive Layout */
   .modal-dialog {
-    padding: 0.85rem !important;
-    border-radius: 16px !important;
-    max-width: 95% !important;
+    padding: 0.5rem !important;
+    border-radius: 18px !important;
+    max-width: 94% !important;
+    margin: 0 auto !important;
   }
 
-  .product-modal-image-wrapper {
-    height: 130px !important;
+  .modal-close-btn {
+    top: 0.75rem !important;
+    right: 0.75rem !important;
+    width: 32px !important;
+    height: 32px !important;
+    z-index: 30 !important;
   }
 
-  .product-modal-image {
-    max-height: 120px !important;
+  .product-modal-grid {
+    padding: 1rem 0.65rem !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .product-modal-image-col {
+    padding: 1rem 0.5rem !important;
+    min-height: 170px !important;
+    border-radius: 14px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .product-modal-image-col img {
+    max-height: 160px !important;
     width: auto !important;
+  }
+
+  .product-modal-title {
+    font-size: 1.25rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .product-modal-price-box {
+    padding: 0.6rem 0.85rem !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.2rem !important;
+  }
+
+  .product-modal-price-box .price-val {
+    font-size: 1.35rem !important;
+  }
+
+  .product-modal-option-group {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.35rem !important;
+    width: 100% !important;
+  }
+
+  .product-modal-option-btn {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 0.5rem 0.6rem !important;
+    font-size: 0.78rem !important;
+    box-sizing: border-box !important;
   }
 
   /* Floating WhatsApp Icon */

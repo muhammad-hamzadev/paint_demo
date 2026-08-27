@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, Star, CheckCircle, Shield, ShoppingCart, Heart, Download, FileText } from 'lucide-react';
+import { X, Star } from 'lucide-react';
 
 export default function ProductModal({
   product,
@@ -11,7 +11,6 @@ export default function ProductModal({
   const [selectedQualityIndex, setSelectedQualityIndex] = useState(0);
   const [selectedSizeIndex, setSelectedSizeIndex] = useState(1);
   const [quantity, setQuantity] = useState(1);
-  const [activeTab, setActiveTab] = useState('overview');
 
   const qualityOptions = [
     { id: 'high', label: 'High Quality (Premium)', multiplier: 1.0 },
@@ -38,17 +37,9 @@ export default function ProductModal({
           <X size={20} />
         </button>
 
-        <div style={{ padding: '2rem', display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '2rem' }}>
+        <div className="product-modal-grid">
           {/* Left: Product Image */}
-          <div style={{
-            background: '#F8FAFC',
-            borderRadius: '16px',
-            padding: '1.5rem',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            position: 'relative'
-          }}>
+          <div className="product-modal-image-col">
             {product.badge && (
               <span
                 className="product-badge-pill"
@@ -60,7 +51,6 @@ export default function ProductModal({
             <img
               src={product.image}
               alt={product.name}
-              style={{ maxHeight: '320px', maxWidth: '100%', objectFit: 'contain' }}
             />
           </div>
 
@@ -69,26 +59,26 @@ export default function ProductModal({
             <span style={{ fontSize: '0.8rem', color: '#13389E', fontWeight: 700, textTransform: 'uppercase' }}>
               {product.categoryName}
             </span>
-            <h2 style={{ fontSize: '1.75rem', fontWeight: 800, color: 'var(--zik-navy-dark)', marginTop: '0.2rem', marginBottom: '0.4rem' }}>
+            <h2 className="product-modal-title" style={{ fontWeight: 800, color: 'var(--zik-navy-dark)', marginTop: '0.2rem', marginBottom: '0.4rem' }}>
               {product.name}
             </h2>
-            <p style={{ fontSize: '0.9rem', color: '#64748B', marginBottom: '0.85rem' }}>
+            <p style={{ fontSize: '0.88rem', color: '#64748B', marginBottom: '0.85rem' }}>
               {product.tagline}
             </p>
 
             {/* Ratings */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1.25rem' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
               <div style={{ display: 'flex', color: '#F59E0B' }}>
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} size={16} fill="currentColor" />
+                  <Star key={i} size={15} fill="currentColor" />
                 ))}
               </div>
-              <span style={{ fontWeight: 700, fontSize: '0.9rem' }}>{product.rating}</span>
-              <span style={{ color: '#94A3B8', fontSize: '0.8rem' }}>({product.reviewsCount} verified reviews)</span>
+              <span style={{ fontWeight: 700, fontSize: '0.88rem' }}>{product.rating}</span>
+              <span style={{ color: '#94A3B8', fontSize: '0.78rem' }}>({product.reviewsCount} verified reviews)</span>
             </div>
 
             {/* Price */}
-            <div style={{
+            <div className="product-modal-price-box" style={{
               background: '#F1F5F9',
               padding: '0.75rem 1.25rem',
               borderRadius: '12px',
@@ -98,12 +88,12 @@ export default function ProductModal({
               marginBottom: '1.25rem'
             }}>
               <div>
-                <span style={{ fontSize: '0.75rem', color: '#64748B', display: 'block' }}>Price (Inc. Taxes)</span>
-                <span style={{ fontSize: '1.6rem', fontWeight: 900, color: 'var(--zik-navy)' }}>
+                <span style={{ fontSize: '0.72rem', color: '#64748B', display: 'block' }}>Price (Inc. Taxes)</span>
+                <span className="price-val" style={{ fontWeight: 900, color: 'var(--zik-navy)' }}>
                   PKR {currentPrice.toLocaleString()}
                 </span>
               </div>
-              <span style={{ color: '#10B981', fontWeight: 700, fontSize: '0.85rem' }}>✓ In Stock • Ready to Dispatch</span>
+              <span style={{ color: '#10B981', fontWeight: 700, fontSize: '0.82rem' }}>✓ In Stock • Ready to Dispatch</span>
             </div>
 
             {/* Quality Grade Selector */}
@@ -111,11 +101,12 @@ export default function ProductModal({
               <label style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1E293B', display: 'block', marginBottom: '0.5rem' }}>
                 Select Quality Category:
               </label>
-              <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+              <div className="product-modal-option-group">
                 {qualityOptions.map((q, idx) => (
                   <button
                     key={q.id}
                     onClick={() => setSelectedQualityIndex(idx)}
+                    className="product-modal-option-btn"
                     style={{
                       padding: '0.5rem 0.9rem',
                       borderRadius: '8px',
@@ -140,13 +131,14 @@ export default function ProductModal({
                 <label style={{ fontSize: '0.85rem', fontWeight: 700, color: '#1E293B', display: 'block', marginBottom: '0.5rem' }}>
                   Select Packaging Size:
                 </label>
-                <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+                <div className="product-modal-option-group">
                   {product.sizes.map((s, idx) => {
                     const priceVal = Math.round(s.price * currentQualityObj.multiplier);
                     return (
                       <button
                         key={idx}
                         onClick={() => setSelectedSizeIndex(idx)}
+                        className="product-modal-option-btn"
                         style={{
                           padding: '0.5rem 0.9rem',
                           borderRadius: '8px',
