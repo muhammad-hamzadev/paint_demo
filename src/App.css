@@ -2170,6 +2170,13 @@ img[src$=".svg"] {
     position: relative !important;
   }
 
+  .hero-section img {
+    object-fit: cover !important;
+    object-position: center !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
   .hero-cta-group {
     margin-top: 1.45rem !important;
     margin-bottom: 0.6rem !important;
