@@ -27,7 +27,9 @@ export default function Navbar({
   onOpenPalette,
   onOpenDealerModal,
   language = 'en',
-  onToggleLanguage
+  onToggleLanguage,
+  onSelectProduct,
+  onSelectShade
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -41,6 +43,25 @@ export default function Navbar({
     { id: 'calculator', label: 'Paint Calculator' },
     { id: 'contact', label: 'Contact' }
   ];
+
+  // Search Filtering
+  const filteredProducts = searchQuery.trim()
+    ? productsData.filter(p =>
+        p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.categoryName?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        p.tagline?.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
+
+  const filteredShades = searchQuery.trim()
+    ? colorShadesData.filter(s =>
+        s.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        s.code.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        s.family.toLowerCase().includes(searchQuery.toLowerCase())
+      )
+    : [];
+
+  const hasSearchQuery = searchQuery.trim().length > 0;
 
   return (
     <>
@@ -206,14 +227,185 @@ export default function Navbar({
 
           {/* Right Action Icons */}
           <div className="nav-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-            <button 
-              onClick={() => setSearchOpen(!searchOpen)} 
-              className="action-btn"
-              aria-label="Search"
-              title="Search"
-            >
-              <Search size={18} />
-            </button>
+            {/* Search Button & Expandable Search Bar Dropdown */}
+            <div style={{ position: 'relative' }}>
+              <button 
+                onClick={() => {
+                  setSearchOpen(!searchOpen);
+                  if (searchOpen) setSearchQuery('');
+                }} 
+                className="action-btn"
+                aria-label="Search"
+                title="Search"
+                style={{
+                  background: searchOpen ? '#EFF6FF' : 'transparent',
+                  color: searchOpen ? '#0B2265' : 'inherit'
+                }}
+              >
+                {searchOpen ? <X size={18} /> : <Search size={18} />}
+              </button>
+
+              {/* Live Search Input & Results Dropdown */}
+              {searchOpen && (
+                <div style={{
+                  position: 'absolute',
+                  top: 'calc(100% + 12px)',
+                  right: 0,
+                  width: '340px',
+                  maxWidth: '90vw',
+                  background: '#FFFFFF',
+                  borderRadius: '16px',
+                  boxShadow: '0 20px 40px rgba(11, 34, 101, 0.22)',
+                  border: '1.5px solid #E2E8F0',
+                  padding: '0.85rem',
+                  zIndex: 99999,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '0.65rem'
+                }}>
+                  {/* Search Input Field */}
+                  <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+                    <Search size={16} color="#64748B" style={{ position: 'absolute', left: '12px' }} />
+                    <input
+                      type="text"
+                      autoFocus
+                      placeholder="Search paints, shades e.g. Silk Touch..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' && searchQuery.trim()) {
+                          onNavigate('products');
+                          setSearchOpen(false);
+                          setSearchQuery('');
+                        }
+                      }}
+                      style={{
+                        width: '100%',
+                        padding: '0.6rem 0.8rem 0.6rem 2.2rem',
+                        borderRadius: '10px',
+                        border: '1.5px solid #CBD5E1',
+                        fontSize: '0.85rem',
+                        fontWeight: 600,
+                        color: '#0B1B3D',
+                        outline: 'none',
+                        background: '#F8FAFC'
+                      }}
+                    />
+                    {searchQuery && (
+                      <button
+                        onClick={() => setSearchQuery('')}
+                        style={{ position: 'absolute', right: '10px', background: 'none', border: 'none', cursor: 'pointer', color: '#94A3B8' }}
+                      >
+                        <X size={14} />
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Results List */}
+                  {hasSearchQuery ? (
+                    <div style={{ maxHeight: '320px', overflowY: 'auto', display: 'flex', flexDirection: 'column', gap: '0.65rem', paddingRight: '4px' }}>
+                      {/* Products Category */}
+                      {filteredProducts.length > 0 && (
+                        <div>
+                          <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#64748B', textTransform: 'uppercase', marginBottom: '0.35rem' }}>
+                            Products ({filteredProducts.length})
+                          </div>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                            {filteredProducts.slice(0, 4).map((product) => (
+                              <button
+                                key={product.id}
+                                onClick={() => {
+                                  if (onSelectProduct) onSelectProduct(product);
+                                  else onNavigate('products');
+                                  setSearchOpen(false);
+                                  setSearchQuery('');
+                                }}
+                                style={{
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  gap: '0.65rem',
+                                  padding: '0.45rem 0.6rem',
+                                  borderRadius: '8px',
+                                  border: '1px solid #EEF2F6',
+                                  background: '#F8FAFC',
+                                  cursor: 'pointer',
+                                  textAlign: 'left',
+                                  width: '100%'
+                                }}
+                              >
+                                <img src={product.image} alt={product.name} style={{ width: '28px', height: '28px', objectFit: 'contain' }} />
+                                <div style={{ flex: 1, minWidth: 0 }}>
+                                  <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0B1B3D', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                    {product.name}
+                                  </div>
+                                  <div style={{ fontSize: '0.72rem', color: '#64748B' }}>
+                                    PKR {product.price?.toLocaleString()}
+                                  </div>
+                                </div>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* Color Shades Category */}
+                      {filteredShades.length > 0 && (
+                        <div>
+                          <div style={{ fontSize: '0.72rem', fontWeight: 800, color: '#64748B', textTransform: 'uppercase', marginBottom: '0.35rem', marginTop: '0.25rem' }}>
+                            Color Shades ({filteredShades.length})
+                          </div>
+                          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.35rem' }}>
+                            {filteredShades.slice(0, 4).map((shade) => (
+                              <button
+                                key={shade.code}
+                                onClick={() => {
+                                  if (onSelectShade) onSelectShade(shade);
+                                  else onNavigate('colors');
+                                  setSearchOpen(false);
+                                  setSearchQuery('');
+                                }}
+                                style={{
+                                  display: 'flex',
+                                  alignItems: 'center',
+                                  gap: '0.65rem',
+                                  padding: '0.45rem 0.6rem',
+                                  borderRadius: '8px',
+                                  border: '1px solid #EEF2F6',
+                                  background: '#FFFFFF',
+                                  cursor: 'pointer',
+                                  textAlign: 'left',
+                                  width: '100%'
+                                }}
+                              >
+                                <div style={{ width: '20px', height: '20px', borderRadius: '50%', background: shade.hex, border: '1px solid #CBD5E1', flexShrink: 0 }} />
+                                <div style={{ flex: 1, minWidth: 0 }}>
+                                  <div style={{ fontSize: '0.82rem', fontWeight: 700, color: '#0B1B3D' }}>
+                                    {shade.name}
+                                  </div>
+                                  <div style={{ fontSize: '0.72rem', color: '#64748B' }}>
+                                    Code: {shade.code}
+                                  </div>
+                                </div>
+                              </button>
+                            ))}
+                          </div>
+                        </div>
+                      )}
+
+                      {filteredProducts.length === 0 && filteredShades.length === 0 && (
+                        <div style={{ padding: '0.85rem', textAlign: 'center', color: '#64748B', fontSize: '0.82rem' }}>
+                          No paints or shades found for "<strong>{searchQuery}</strong>".
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <div style={{ padding: '0.4rem', fontSize: '0.78rem', color: '#64748B' }}>
+                      💡 Type a product name (e.g., <strong>Silk Touch</strong>, <strong>Weather Shield</strong>) or shade code (e.g., <strong>ZIK-101</strong>).
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
 
             {/* 3-Line Mobile Hamburger Menu Icon Button (Mobile Only) */}
             <button
