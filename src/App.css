@@ -2349,12 +2349,28 @@ img[src$=".svg"] {
   /* Product Cards & Grid (2 compact cards per row) */
   .products-grid-layout {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.6rem !important;
+    gap: 0.5rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
 
   .product-card {
-    padding: 0.6rem 0.5rem !important;
+    padding: 0.6rem 0.4rem !important;
     border-radius: 14px !important;
+    min-width: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  .product-size-select,
+  .product-card select {
+    max-width: 100% !important;
+    font-size: 0.68rem !important;
+    padding: 0.25rem 0.2rem !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
   }
 
   .product-img-wrapper {
@@ -2386,39 +2402,35 @@ img[src$=".svg"] {
     font-size: 0.85rem !important;
   }
 
-  .product-card-btn {
-    padding: 0.38rem 0.6rem !important;
-    font-size: 0.72rem !important;
-    border-radius: 10px !important;
-  }
-
   .product-card-actions {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 0.3rem !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.35rem !important;
     margin-top: 0.5rem !important;
+    width: 100% !important;
   }
 
-  .btn-card-primary,
   .btn-card-secondary {
-    padding: 0.45rem 0.2rem !important;
-    font-size: 0.64rem !important;
+    flex: 1 !important;
+    padding: 0.45rem 0.3rem !important;
+    font-size: 0.68rem !important;
     font-weight: 800 !important;
     border-radius: 10px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    gap: 2px !important;
     white-space: nowrap !important;
-    text-align: center !important;
-    line-height: 1 !important;
   }
 
-  .btn-card-primary svg,
-  .btn-card-secondary svg {
-    width: 12px !important;
-    height: 12px !important;
-    margin-right: 2px !important;
+  .btn-whatsapp-icon-only {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    padding: 0 !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     flex-shrink: 0 !important;
   }
 
