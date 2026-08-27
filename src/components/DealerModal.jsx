@@ -12,7 +12,7 @@ export default function DealerModal({ isOpen, onClose }) {
   };
 
   const googleMapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.4248467924913!2d71.559547774359!3d33.981619721458415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d9179588d5a465%3A0x85a69dc9be0042de!2sZik%20Paint%20%26%20Chemical!5e0!3m2!1sen!2s!4v1787772864794!5m2!1sen!2s";
-  const directMapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(branch.name + ' ' + branch.address)}`;
+  const directMapUrl = "https://maps.app.goo.gl/4LQf3DYre6M21F3N7";
 
   return (
     <div className="modal-backdrop" onClick={onClose}>
