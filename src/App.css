@@ -2522,8 +2522,8 @@ img[src$=".svg"] {
 
   /* Topbar & Header - Strictly 1 Single Horizontal Line */
   .top-bar {
-    padding: 0.15rem 0 !important;
-    height: 30px !important;
+    padding: 0.25rem 0 !important;
+    height: 36px !important;
     display: flex !important;
     align-items: center !important;
   }
@@ -2534,9 +2534,9 @@ img[src$=".svg"] {
     justify-content: space-between !important;
     align-items: center !important;
     white-space: nowrap !important;
-    gap: 0.5rem !important;
+    gap: 0.75rem !important;
     padding: 0 0.5rem !important;
-    font-size: 0.65rem !important;
+    font-size: 0.78rem !important;
     overflow: hidden !important;
   }
 

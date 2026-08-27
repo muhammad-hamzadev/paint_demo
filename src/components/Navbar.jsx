@@ -47,28 +47,28 @@ export default function Navbar({
       {/* Top Notification / Contact Bar - Strictly 1 Single Inline Row */}
       <div className="top-bar">
         <div className="container top-bar-inner" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', alignItems: 'center', justifyContent: 'space-between', whiteSpace: 'nowrap', overflow: 'hidden' }}>
-          <div className="top-bar-left" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', alignItems: 'center', gap: '0.6rem', whiteSpace: 'nowrap' }}>
-            <span className="top-bar-item top-bar-slogan" style={{ color: '#F1F5F9', fontWeight: 600, fontSize: '0.72rem' }}>
+          <div className="top-bar-left" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', alignItems: 'center', gap: '0.85rem', whiteSpace: 'nowrap' }}>
+            <span className="top-bar-item top-bar-slogan" style={{ color: '#F1F5F9', fontWeight: 700, fontSize: '0.88rem' }}>
               High Quality Paints for Beautiful Spaces
             </span>
-            <a href="tel:+923001234567" className="top-bar-item" style={{ fontSize: '0.72rem', whiteSpace: 'nowrap' }}>
-              <Phone size={11} /> +92 300 1234567
+            <a href="tel:+923001234567" className="top-bar-item" style={{ fontSize: '0.88rem', fontWeight: 700, whiteSpace: 'nowrap' }}>
+              <Phone size={14} /> +92 300 1234567
             </a>
           </div>
 
-          <div className="top-bar-right" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', alignItems: 'center', gap: '0.6rem', whiteSpace: 'nowrap' }}>
+          <div className="top-bar-right" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', alignItems: 'center', gap: '0.85rem', whiteSpace: 'nowrap' }}>
             <button 
               onClick={onOpenDealerModal} 
               className="top-bar-item" 
-              style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '0.72rem', whiteSpace: 'nowrap' }}
+              style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: '0.88rem', fontWeight: 700, whiteSpace: 'nowrap' }}
             >
-              <MapPin size={11} color="#EC4899" /> Location
+              <MapPin size={14} color="#EC4899" /> Location
             </button>
 
-            <div className="top-bar-socials" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', gap: '0.4rem', alignItems: 'center' }}>
-              <a href="#" className="top-bar-social-btn" aria-label="Facebook"><FacebookIcon size={13} /></a>
-              <a href="#" className="top-bar-social-btn" aria-label="Instagram"><InstagramIcon size={13} /></a>
-              <a href="https://wa.me/923001234567" target="_blank" rel="noreferrer" className="top-bar-social-btn" aria-label="WhatsApp"><WhatsappIcon size={13} /></a>
+            <div className="top-bar-socials" style={{ display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', gap: '0.5rem', alignItems: 'center' }}>
+              <a href="#" className="top-bar-social-btn" aria-label="Facebook"><FacebookIcon size={15} /></a>
+              <a href="#" className="top-bar-social-btn" aria-label="Instagram"><InstagramIcon size={15} /></a>
+              <a href="https://wa.me/923001234567" target="_blank" rel="noreferrer" className="top-bar-social-btn" aria-label="WhatsApp"><WhatsappIcon size={15} /></a>
             </div>
           </div>
         </div>
