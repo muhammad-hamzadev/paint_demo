@@ -37,7 +37,15 @@ export default function HomePage({
         onSelectProduct={onSelectProduct}
       />
 
-      {/* 2. SHOP BY CATEGORY (8 Categories) */}
+      {/* 2. COLOR DISCOVERY SECTION (FIND YOUR COLOR) */}
+      <RoomVisualizer
+        onOpenConsultation={onOpenConsultation}
+        onAddToCart={onAddToCart}
+        onToggleFavorite={onToggleFavoriteShade}
+        isFavorite={isFavoriteShade}
+      />
+
+      {/* 3. SHOP BY CATEGORY (8 Categories) */}
       <CategorySection
         activeCategory="all"
         onSelectCategory={(catId) => {
@@ -46,7 +54,7 @@ export default function HomePage({
         }}
       />
 
-      {/* 3. POPULAR PRODUCTS (5 Products Grid) */}
+      {/* 4. POPULAR PRODUCTS (5 Products Grid) */}
       <PopularProducts
         activeCategory="all"
         onSelectProduct={onSelectProduct}
@@ -56,14 +64,6 @@ export default function HomePage({
         onViewShades={() => {
           if (onNavigate) onNavigate('colors');
         }}
-      />
-
-      {/* 4. COLOR DISCOVERY SECTION (FIND YOUR PERFECT COLOR) */}
-      <RoomVisualizer
-        onOpenConsultation={onOpenConsultation}
-        onAddToCart={onAddToCart}
-        onToggleFavorite={onToggleFavoriteShade}
-        isFavorite={isFavoriteShade}
       />
 
       {/* 5. CUSTOMER TESTIMONIALS (5-Star Reviews) */}
