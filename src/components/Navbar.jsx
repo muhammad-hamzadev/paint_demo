@@ -88,7 +88,7 @@ export default function Navbar({
                 ZIK<span className="brand-logo-accent">.</span>
               </div>
               <div className="brand-logo-sub">
-                PAINTS <span></span> PAKISTAN
+                PAINT INDUSTRY <span></span> PAKISTAN
               </div>
             </div>
           </button>
