@@ -2153,29 +2153,40 @@ img[src$=".svg"] {
     gap: 0.5rem !important;
   }
 
-  .hero-visual-wrapper {
-    min-height: auto !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 0.35rem 0 !important;
-    margin: 0 auto !important;
-  }
-
+  .hero-visual-wrapper,
   .hero-products-foreground {
-    max-width: 140px !important;
-    margin: 0 auto !important;
-    justify-content: center !important;
-    transform: none !important;
-  }
-
-  .hero-products-foreground img {
-    max-height: 110px !important;
-    margin: 0 auto !important;
+    display: none !important;
   }
 
   .hero-section .border-t {
     border-top: none !important;
     padding-top: 0.25rem !important;
+  }
+}
+
+/* Tablet Screen Hero Typography Adjustments (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-headline {
+    font-size: 2.85rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .hero-subheadline {
+    font-size: 1.15rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .hero-cta-group button {
+    padding: 0.95rem 2.2rem !important;
+    font-size: 1.05rem !important;
+  }
+
+  .hero-content {
+    max-width: 100% !important;
+  }
+
+  .hero-grid {
+    gap: 1.5rem !important;
   }
 }
 
