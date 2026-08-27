@@ -55,7 +55,7 @@ export default function ProductsPage({
       {/* Page Hero Header with Clean Blue Room Background */}
       <div 
         className="relative text-white py-20 sm:py-24 px-4 overflow-hidden bg-cover bg-center border-b border-slate-200 shadow-lg"
-        style={{ backgroundImage: `url('/assets/images/room-blue-bg.svg')` }}
+        style={{ backgroundImage: `url('./assets/images/room-blue-bg.svg')` }}
       >
         {/* Subtle Transparent Overlay for Text Contrast */}
         <div className="absolute inset-0 bg-black/25" />

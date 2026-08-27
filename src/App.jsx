@@ -40,7 +40,7 @@ export default function App() {
     {
       id: 'silk-touch',
       name: 'ZIK Silk Touch Emulsion',
-      image: '/assets/images/product-silk-touch.svg',
+      image: './assets/images/product-silk-touch.svg',
       size: '4 Litres (Gallon)',
       price: 5200,
       quantity: 2
@@ -48,7 +48,7 @@ export default function App() {
     {
       id: 'weather-shield',
       name: 'ZIK Weather Shield',
-      image: '/assets/images/product-weather-shield.svg',
+      image: './assets/images/product-weather-shield.svg',
       size: '16 Litres (Drum)',
       price: 18200,
       quantity: 1

@@ -36,7 +36,7 @@ export default function PaintCalculator({ onAddToCart }) {
     onAddToCart({
       id: paintType,
       name: paintType === 'silk-touch' ? 'ZIK Silk Touch Emulsion' : paintType === 'weather-shield' ? 'ZIK Weather Shield' : 'ZIK Royal Matt',
-      image: paintType === 'silk-touch' ? '/assets/images/product-silk-touch.svg' : '/assets/images/product-weather-shield.svg'
+      image: paintType === 'silk-touch' ? './assets/images/product-silk-touch.svg' : './assets/images/product-weather-shield.svg'
     }, {
       size: `${totalLitersRequired} Litres Project Pack`,
       price: estimatedCost

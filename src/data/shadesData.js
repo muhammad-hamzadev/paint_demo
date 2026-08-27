@@ -145,30 +145,30 @@ export const visualizerRooms = [
     id: 'geometric-navy',
     name: 'Geometric Navy — Accent Wall',
     shadeCode: 'ZIK-105',
-    image: '/assets/images/hero-interior.svg'
+    image: './assets/images/hero-interior.svg'
   },
   {
     id: 'sage-shield',
     name: 'Sage Shield — Green',
     shadeCode: 'ZIK-401',
-    image: '/assets/images/hero-slide2-exterior.svg'
+    image: './assets/images/hero-slide2-exterior.svg'
   },
   {
     id: 'ocean-mist',
     name: 'Ocean Mist — Blue',
     shadeCode: 'ZIK-101',
-    image: '/assets/images/hero-slide3-interior.svg'
+    image: './assets/images/hero-slide3-interior.svg'
   },
   {
     id: 'silver-stone',
     name: 'Silver Stone — Gray',
     shadeCode: 'ZIK-209',
-    image: '/assets/images/blank-white-wall.svg'
+    image: './assets/images/blank-white-wall.svg'
   },
   {
     id: 'terracotta-touch',
     name: 'Terracotta Touch — Maroon',
     shadeCode: 'ZIK-301',
-    image: '/assets/images/luxury-terracotta-room.svg'
+    image: './assets/images/luxury-terracotta-room.svg'
   }
 ];

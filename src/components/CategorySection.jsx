@@ -8,7 +8,7 @@ export default function CategorySection({ activeCategory, onSelectCategory }) {
       {/* Clean Background Room Image Layer */}
       <div 
         className="absolute inset-0 opacity-10 pointer-events-none bg-cover bg-center"
-        style={{ backgroundImage: `url('/assets/images/room-blue-bg.svg')` }}
+        style={{ backgroundImage: `url('./assets/images/room-blue-bg.svg')` }}
       />
 
       <div className="container relative z-10">
@@ -41,7 +41,7 @@ export default function CategorySection({ activeCategory, onSelectCategory }) {
                   {cat.id === 'interior' && (
                     <div className="category-prod-wrapper">
                       <img
-                        src="/assets/images/product-silk-touch.svg"
+                        src="./assets/images/product-silk-touch.svg"
                         alt="ZIK Silk Touch Emulsion Bucket"
                         className="category-bucket-img"
                       />
@@ -51,7 +51,7 @@ export default function CategorySection({ activeCategory, onSelectCategory }) {
                   {cat.id === 'exterior' && (
                     <div className="category-prod-wrapper">
                       <img
-                        src="/assets/images/product-weather-shield.svg"
+                        src="./assets/images/product-weather-shield.svg"
                         alt="ZIK Weather Shield 100% Acrylic Bucket"
                         className="category-bucket-img"
                       />
@@ -104,13 +104,13 @@ export default function CategorySection({ activeCategory, onSelectCategory }) {
                   {cat.id === 'primers' && (
                     <div className="category-prod-wrapper flex items-center justify-center gap-1">
                       <img
-                        src="/assets/images/product-aqueous-primer.svg"
+                        src="./assets/images/product-aqueous-primer.svg"
                         alt="ZIK Aqueous Wall Primer Bucket"
                         className="category-bucket-img"
                         style={{ height: '90px', objectFit: 'contain' }}
                       />
                       <img
-                        src="/assets/images/product-smooth-putty.svg"
+                        src="./assets/images/product-smooth-putty.svg"
                         alt="ZIK Smooth Wall Putty Bucket"
                         className="category-bucket-img"
                         style={{ height: '85px', objectFit: 'contain' }}

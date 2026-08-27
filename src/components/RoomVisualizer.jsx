@@ -25,7 +25,7 @@ export default function RoomVisualizer({ onOpenConsultation }) {
     '#FDF2F8', '#F472B6', '#EC4899', '#DB2777', '#BE185D', '#9D174D', '#831843', '#500724'
   ];
 
-  const blankWhiteWallImage = '/assets/images/blank-white-wall.svg';
+  const blankWhiteWallImage = './assets/images/blank-white-wall.svg';
 
   const handleCopyCode = () => {
     navigator.clipboard.writeText(`${selectedShade.code} ${selectedShade.name} (${selectedShade.hex})`);

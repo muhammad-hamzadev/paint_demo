@@ -24,8 +24,8 @@ export default function Hero({
       primaryCtaAction: 'products',
       secondaryCtaText: 'Find Your Color',
       secondaryCtaAction: 'colors',
-      bgImage: '/assets/images/hero-interior.svg',
-      bucketImage: '/assets/images/hero-buckets.svg',
+      bgImage: './assets/images/hero-interior.svg',
+      bucketImage: './assets/images/hero-buckets.svg',
       bucketAlt: 'ZIK Paints Collection'
     },
     {
@@ -39,8 +39,8 @@ export default function Hero({
       primaryCtaAction: 'products',
       secondaryCtaText: 'Paint Calculator',
       secondaryCtaAction: 'calculator',
-      bgImage: '/assets/images/hero-slide2-exterior.svg',
-      bucketImage: '/assets/images/product-weather-shield.svg',
+      bgImage: './assets/images/hero-slide2-exterior.svg',
+      bucketImage: './assets/images/product-weather-shield.svg',
       bucketAlt: 'ZIK Weather Shield Paint Bucket'
     },
     {
@@ -54,8 +54,8 @@ export default function Hero({
       primaryCtaAction: 'products',
       secondaryCtaText: 'Paint Calculator',
       secondaryCtaAction: 'calculator',
-      bgImage: '/assets/images/hero-slide3-interior.svg',
-      bucketImage: '/assets/images/product-aqueous-primer.svg',
+      bgImage: './assets/images/hero-slide3-interior.svg',
+      bucketImage: './assets/images/product-aqueous-primer.svg',
       bucketAlt: 'ZIK Aqueous Wall Primer Bucket'
     },
     {
@@ -69,8 +69,8 @@ export default function Hero({
       primaryCtaAction: 'products',
       secondaryCtaText: 'Find Your Color',
       secondaryCtaAction: 'colors',
-      bgImage: '/assets/images/luxury-terracotta-room.svg',
-      bucketImage: '/assets/images/product-silk-touch.svg',
+      bgImage: './assets/images/luxury-terracotta-room.svg',
+      bucketImage: './assets/images/product-silk-touch.svg',
       bucketAlt: 'ZIK Silk Touch Emulsion Bucket'
     }
   ];

@@ -64,7 +64,7 @@ export default function ContactPage({ onOpenDealerModal }) {
       {/* Page Hero Header with AI Generated Store Locator Map Background */}
       <div 
         className="relative text-white py-20 sm:py-24 px-4 overflow-hidden bg-cover bg-center border-b border-blue-900/60 shadow-2xl"
-        style={{ backgroundImage: `url('/assets/images/ai-store-locator-map.jpg')` }}
+        style={{ backgroundImage: `url('./assets/images/ai-store-locator-map.svg')` }}
       >
         {/* Dark Glass Overlay Tint */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#0B1B3D]/95 via-[#0B1B3D]/85 to-[#040D25]/75 backdrop-blur-[1px]" />
@@ -115,7 +115,7 @@ export default function ContactPage({ onOpenDealerModal }) {
         {/* Dealer Map Locator Banner */}
         <div 
           className="relative rounded-3xl p-8 sm:p-12 text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl overflow-hidden bg-cover bg-center border border-blue-800/40"
-          style={{ backgroundImage: `url('/assets/images/ai-store-locator-map.jpg')` }}
+          style={{ backgroundImage: `url('./assets/images/ai-store-locator-map.svg')` }}
         >
           {/* Tint Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-[#0B2265]/90 via-[#0B2265]/80 to-[#040D25]/75" />
