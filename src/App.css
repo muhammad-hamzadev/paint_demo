@@ -2129,22 +2129,27 @@ img[src$=".svg"] {
   background: linear-gradient(90deg, rgba(230, 241, 254, 0.96) 0%, rgba(244, 248, 254, 0.88) 45%, rgba(244, 248, 254, 0.4) 70%, rgba(11, 27, 61, 0.15) 100%);
 }
 
-/* Hide Floating Bubbles & Color Glow on Mobile to Eliminate Whitespace & Distortion */
+/* Mobile Phone View (<768px) - Photorealistic Room Background + Glass Bubbles Effect */
 @media (max-width: 768px) {
   .hero-bg-overlay {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.82) 50%, rgba(255, 255, 255, 0.94) 100%) !important;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.5) 35%, rgba(255, 255, 255, 0.08) 70%, rgba(11, 27, 61, 0.2) 100%) !important;
   }
 
   .floating-bubbles-container,
-  .glass-bubble,
+  .glass-bubble {
+    display: block !important;
+    opacity: 0.85 !important;
+    pointer-events: none !important;
+  }
+
   .hero-color-splash-glow {
     display: none !important;
   }
 
   .hero-section {
-    padding-top: 0.6rem !important;
+    padding-top: 0.85rem !important;
     padding-bottom: 0 !important;
-    min-height: auto !important;
+    min-height: 380px !important;
     position: relative !important;
   }
 
@@ -2160,7 +2165,7 @@ img[src$=".svg"] {
 
   .hero-section .border-t {
     border-top: none !important;
-    padding-top: 0.25rem !important;
+    padding-top: 0.35rem !important;
   }
 }
 
