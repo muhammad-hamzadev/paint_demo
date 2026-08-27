@@ -2166,8 +2166,14 @@ img[src$=".svg"] {
   .hero-section {
     padding-top: 0.85rem !important;
     padding-bottom: 0 !important;
-    min-height: 380px !important;
+    min-height: auto !important;
     position: relative !important;
+  }
+
+  .hero-cta-group {
+    margin-top: 0.85rem !important;
+    margin-bottom: 0.4rem !important;
+    gap: 0.5rem !important;
   }
 
   .hero-grid {
@@ -2181,8 +2187,10 @@ img[src$=".svg"] {
   }
 
   .hero-section .border-t {
-    border-top: none !important;
-    padding-top: 0.35rem !important;
+    border-top: 1px solid rgba(203, 213, 225, 0.6) !important;
+    padding-top: 0.45rem !important;
+    margin-top: 0.6rem !important;
+    margin-bottom: 0 !important;
   }
 }
 
