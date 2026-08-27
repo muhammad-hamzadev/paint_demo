@@ -10,7 +10,9 @@ import {
   HelpCircle, 
   ChevronDown, 
   ChevronUp,
-  Building2
+  Building2,
+  Navigation,
+  ExternalLink
 } from 'lucide-react';
 
 export default function ContactPage({ onOpenDealerModal }) {
@@ -61,48 +63,41 @@ export default function ContactPage({ onOpenDealerModal }) {
   return (
     <div className="bg-slate-50 min-h-screen pb-20">
       
-      {/* Top Page Header */}
-      <div className="bg-gradient-to-r from-brand-navy via-brand-navy-dark to-slate-900 text-white py-16 px-4 sm:px-8 shadow-inner relative overflow-hidden">
+      {/* Page Hero Header with AI Generated Store Locator Map Background */}
+      <div 
+        className="relative text-white py-20 sm:py-24 px-4 overflow-hidden bg-cover bg-center border-b border-blue-900/60 shadow-2xl"
+        style={{ backgroundImage: `url('./assets/images/ai-store-locator-map.svg')` }}
+      >
+        {/* Dark Glass Overlay Tint */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1B3D]/95 via-[#0B1B3D]/85 to-[#040D25]/75 backdrop-blur-[1px]" />
+
         <div className="max-w-7xl mx-auto text-center space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 bg-amber-400/20 border border-amber-300/30 text-amber-300 text-xs font-extrabold px-4 py-1.5 rounded-full uppercase tracking-wider">
-            <Sparkles className="w-4 h-4" /> We're Here to Help
-          </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Contact ZIK Paint Industry
+          <span className="inline-flex items-center gap-1.5 bg-white/15 backdrop-blur-md border border-white/20 text-blue-300 text-xs font-extrabold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-md">
+            <Phone className="w-4 h-4 text-brand-orange" /> Contact & Store Locator
+          </span>
+          <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white drop-shadow-lg">
+            GET IN TOUCH WITH ZIK PAINTS
           </h1>
-          <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto">
-            Have questions about paint selection, custom shade tinting, or bulk dealership orders? Get in touch with our team in Peshawar today.
+          <p className="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto font-medium drop-shadow-md">
+            Have questions about product specifications, shade decks, dealer locations, or bulk contractor quotes? Our team is here to assist.
           </p>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 mt-10 space-y-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-10 space-y-12">
         
-        {/* Contact Info Cards (3 Columns) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Contact Info Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-md flex items-start gap-4">
             <div className="w-12 h-12 rounded-xl bg-blue-50 text-brand-navy flex items-center justify-center shrink-0">
               <Phone className="w-6 h-6" />
             </div>
             <div>
               <h4 className="text-xs font-extrabold uppercase text-slate-400">Customer Helpline & WhatsApp</h4>
-              <a href="tel:03306100065" className="text-lg font-extrabold text-slate-900 hover:text-brand-navy block mt-1">
+              <a href="tel:03306100065" className="text-lg font-black text-slate-900 hover:text-brand-navy block mt-1">
                 03306100065
               </a>
-              <span className="text-xs text-emerald-600 font-bold block mt-0.5">✓ WhatsApp Order Available</span>
-            </div>
-          </div>
-
-          <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-md flex items-start gap-4">
-            <div className="w-12 h-12 rounded-xl bg-rose-50 text-brand-rose flex items-center justify-center shrink-0">
-              <Mail className="w-6 h-6" />
-            </div>
-            <div>
-              <h4 className="text-xs font-extrabold uppercase text-slate-400">Email Support</h4>
-              <a href="mailto:info@zikpaints.com" className="text-base font-extrabold text-slate-900 hover:text-brand-rose block mt-1">
-                info@zikpaints.com
-              </a>
-              <span className="text-xs text-slate-500 block mt-0.5">Replies within 24 hours</span>
+              <p className="text-xs text-slate-500 mt-1">Mon - Sat: 9:00 AM - 9:00 PM</p>
             </div>
           </div>
 
@@ -119,48 +114,32 @@ export default function ContactPage({ onOpenDealerModal }) {
           </div>
         </div>
 
-        {/* Real Embedded Google Map Section */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-xl space-y-6">
-          {/* Header Info */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        {/* Live Interactive Store Map Locator */}
+        <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-xl space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <span className="bg-blue-50 text-brand-navy border border-blue-200 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest">
-                📍 Peshawar Flagship Branch
+              <span className="bg-blue-100 text-brand-navy border border-blue-200 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest inline-block mb-2">
+                📍 Peshawar Flagship Branch Map
               </span>
-              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-2">
-                Locate ZIK Paint Industry Main Outlet
-              </h3>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900">Locate ZIK Paint Industry Main Outlet</h3>
               <p className="text-slate-600 text-sm mt-1">
-                Visit our factory outlet at Small Industrial Estate, Kohat Road, Peshawar to view live shade cards and make purchases.
+                Small Industrial Estate, Kohat Road, Peshawar • Live Shade Cards & Factory Outlet
               </p>
             </div>
-
             <a
               href="https://maps.app.goo.gl/4LQf3DYre6M21F3N7"
               target="_blank"
               rel="noreferrer"
-              className="shrink-0 bg-brand-orange hover:bg-orange-600 text-white font-extrabold text-sm px-6 py-3.5 rounded-2xl shadow-md transition transform hover:-translate-y-0.5 inline-flex items-center justify-center gap-2"
+              className="shrink-0 bg-brand-navy hover:bg-blue-900 text-white font-extrabold text-xs sm:text-sm px-6 py-3.5 rounded-2xl shadow-md transition inline-flex items-center justify-center gap-2"
             >
-              <Navigation className="w-4 h-4" /> Open in Google Maps <ExternalLink className="w-4 h-4" />
+              <Navigation className="w-4 h-4 text-amber-400" /> Open Direct Google Maps <ExternalLink className="w-4 h-4" />
             </a>
           </div>
 
-          {/* Interactive Map Iframe Box with Floating 'Open in Maps' Button */}
-          <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-inner h-[380px] sm:h-[420px] w-full">
-            {/* Top-Left Floating 'Open in Maps' Badge */}
-            <a
-              href="https://maps.app.goo.gl/4LQf3DYre6M21F3N7"
-              target="_blank"
-              rel="noreferrer"
-              className="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-md hover:bg-white text-blue-600 font-extrabold text-xs px-4 py-2 rounded-xl shadow-lg border border-slate-200 inline-flex items-center gap-1.5 transition"
-            >
-              <span>Open in Maps</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-
-            {/* Google Map Iframe */}
+          {/* Embedded Google Map Iframe */}
+          <div className="w-full h-[360px] sm:h-[420px] rounded-2xl overflow-hidden border border-slate-300 shadow-inner relative">
             <iframe
-              title="ZIK Paint Industry Peshawar Outlet Location Map"
+              title="ZIK Paint & Chemical Peshawar Store Map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3308.4248467924913!2d71.559547774359!3d33.981619721458415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38d9179588d5a465%3A0x85a69dc9be0042de!2sZik%20Paint%20%26%20Chemical!5e0!3m2!1sen!2s!4v1787772864794!5m2!1sen!2s"
               width="100%"
               height="100%"
@@ -169,18 +148,6 @@ export default function ContactPage({ onOpenDealerModal }) {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-          </div>
-
-          {/* Bottom Bar Info */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-2 border-t border-slate-100 text-xs font-extrabold text-slate-700">
-            <div className="flex items-center gap-2">
-              <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-              <span className="text-emerald-700">Open & Ready to Serve • 9:00 AM - 9:00 PM (Mon - Sat)</span>
-            </div>
-            <div className="flex items-center gap-4 flex-wrap">
-              <span className="text-slate-500">📍 Small Industrial Estate, Kohat Road, Peshawar</span>
-              <a href="tel:03306100065" className="text-brand-navy hover:underline font-extrabold">📞 03306100065</a>
-            </div>
           </div>
         </div>
 
