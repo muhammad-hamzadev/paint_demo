@@ -60,12 +60,15 @@ export default function ProductShadesExplorer({ onSelectShade, onOpenConsultatio
   const handlePageChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setCurrentPage(newPage);
-      window.scrollTo({ top: 400, behavior: 'smooth' });
+      const elem = document.getElementById('shades-explorer-section');
+      if (elem) {
+        elem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   };
 
   return (
-    <div className="py-6 space-y-8">
+    <div id="shades-explorer-section" className="py-6 space-y-8">
 
       {/* ========================================================================= */}
       {/* 1000+ COLOR SHADES EXPLORER CONTAINER                                     */}
