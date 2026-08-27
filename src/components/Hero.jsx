@@ -80,7 +80,7 @@ export default function Hero({
     if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 15000);
+    }, 3000);
     return () => clearInterval(timer);
   }, [isPaused, heroSlides.length]);
 
