@@ -77,12 +77,11 @@ export default function Hero({
 
   // Auto-advance slides every 15 seconds unless paused
   useEffect(() => {
-    if (isPaused) return;
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 3000);
+    }, 2500);
     return () => clearInterval(timer);
-  }, [isPaused, heroSlides.length]);
+  }, [heroSlides.length]);
 
   const handleNext = () => {
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
@@ -105,8 +104,6 @@ export default function Hero({
     <section
       id="hero"
       className="hero-section relative overflow-hidden"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
     >
 
       {/* 1. NETFLIX-STYLE CROSS-FADING BACKGROUND IMAGES */}
