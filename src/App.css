@@ -2131,6 +2131,23 @@ img[src$=".svg"] {
 
 /* Mobile Phone View (<768px) - Photorealistic Room Background + Glass Bubbles Effect */
 @media (max-width: 768px) {
+  .container {
+    padding-left: 0.85rem !important;
+    padding-right: 0.85rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .products-grid-layout,
+  .category-grid {
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
   .hero-bg-overlay {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0.5) 35%, rgba(255, 255, 255, 0.08) 70%, rgba(11, 27, 61, 0.2) 100%) !important;
   }
