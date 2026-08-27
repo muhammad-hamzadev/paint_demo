@@ -33,8 +33,8 @@ export default function ProductsPage({
   };
 
   const handleWhatsAppOrder = (product, qualityLabel, sizeName, price) => {
-    const phone = '923001234567';
-    const text = `Assalam-o-Alaikum ZIK Paints!\nI want to order:\n📦 Product: ${product.name}\n⭐ Quality Grade: ${qualityLabel}\n🛢️ Pack Size: ${sizeName}\n💰 Price: PKR ${price.toLocaleString()}\n\nPlease details send karein.`;
+    const phone = '923306100065';
+    const text = `Assalam-o-Alaikum ZIK Paint Industry!\nI want to order:\n📦 Product: ${product.name}\n⭐ Quality Grade: ${qualityLabel}\n🛢️ Pack Size: ${sizeName}\n💰 Price: PKR ${price.toLocaleString()}\n\nPlease details send karein.`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };

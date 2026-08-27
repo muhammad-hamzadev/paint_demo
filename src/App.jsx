@@ -269,7 +269,7 @@ export default function App() {
 
       {/* Floating WhatsApp Widget Button */}
       <a
-        href="https://wa.me/923001234567?text=Assalam-o-Alaikum%20ZIK%20Paints!%20I%20have%20an%20inquiry."
+        href="https://wa.me/923306100065?text=Assalam-o-Alaikum%20ZIK%20Paint%20Industry!%20I%20have%20an%20inquiry."
         target="_blank"
         rel="noopener noreferrer"
         style={{

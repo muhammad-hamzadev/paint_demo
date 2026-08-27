@@ -25,8 +25,8 @@ export default function ProductModal({
   const currentPrice = Math.round(basePrice * currentQualityObj.multiplier) * quantity;
 
   const handleWhatsAppOrder = () => {
-    const phone = '923001234567';
-    const text = `Assalam-o-Alaikum ZIK Paints!\nI want to order:\n📦 Product: ${product.name}\n⭐ Quality Grade: ${currentQualityObj.label}\n🛢️ Pack Size: ${currentSizeObj.size}\n🔢 Qty: ${quantity}\n💰 Price: PKR ${currentPrice.toLocaleString()}\n\nPlease details send karein.`;
+    const phone = '923306100065';
+    const text = `Assalam-o-Alaikum ZIK Paint Industry!\nI want to order:\n📦 Product: ${product.name}\n⭐ Quality Grade: ${currentQualityObj.label}\n🛢️ Pack Size: ${currentSizeObj.size}\n🔢 Qty: ${quantity}\n💰 Price: PKR ${currentPrice.toLocaleString()}\n\nPlease details send karein.`;
     const url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
     window.open(url, '_blank');
   };

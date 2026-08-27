@@ -5,9 +5,9 @@ export default function DealerModal({ isOpen, onClose }) {
 
   const branch = {
     city: 'Peshawar',
-    name: 'ZIK Paints Main Experience Center & Outlet',
-    address: 'Main University Road, Near Gulabad Stop, Peshawar, Khyber Pakhtunkhwa',
-    phone: '+92 300 1234567',
+    name: 'ZIK Paint Industry Main Outlet',
+    address: 'Small Industrial Estate, Kohat Road, Peshawar',
+    phone: '03306100065',
     timings: '9:00 AM - 9:00 PM (Monday - Saturday)'
   };
 

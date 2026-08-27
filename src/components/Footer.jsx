@@ -41,7 +41,7 @@ export default function Footer({ onNavigate, onOpenDealerModal, onSelectCategory
                 ZIK<span style={{ color: 'var(--zik-magenta)' }}>.</span>
               </div>
               <div className="brand-logo-sub" style={{ color: '#38BDF8' }}>
-                PAINTS <span style={{ background: '#38BDF8' }}></span> PAKISTAN
+                PAINT INDUSTRY <span style={{ background: '#38BDF8' }}></span> PAKISTAN
               </div>
             </button>
 
@@ -52,7 +52,7 @@ export default function Footer({ onNavigate, onOpenDealerModal, onSelectCategory
             <div className="top-bar-socials">
               <a href="#" className="top-bar-social-btn" style={{ background: 'rgba(255, 255, 255, 0.08)', width: '36px', height: '36px', borderRadius: '50%' }}><FacebookIcon size={16} /></a>
               <a href="#" className="top-bar-social-btn" style={{ background: 'rgba(255, 255, 255, 0.08)', width: '36px', height: '36px', borderRadius: '50%' }}><InstagramIcon size={16} /></a>
-              <a href="https://wa.me/923001234567" target="_blank" rel="noreferrer" className="top-bar-social-btn" style={{ background: 'rgba(255, 255, 255, 0.08)', width: '36px', height: '36px', borderRadius: '50%' }}><WhatsappIcon size={16} /></a>
+              <a href="https://wa.me/923306100065" target="_blank" rel="noreferrer" className="top-bar-social-btn" style={{ background: 'rgba(255, 255, 255, 0.08)', width: '36px', height: '36px', borderRadius: '50%' }}><WhatsappIcon size={16} /></a>
             </div>
           </div>
 
@@ -102,7 +102,7 @@ export default function Footer({ onNavigate, onOpenDealerModal, onSelectCategory
             <div className="footer-contact-item">
               <Phone size={16} color="#38BDF8" style={{ marginTop: '3px' }} />
               <div>
-                <a href="tel:+923001234567" style={{ color: '#E2E8F0', fontWeight: 700 }}>+92 300 1234567</a>
+                <a href="tel:+923306100065" style={{ color: '#E2E8F0', fontWeight: 700 }}>03306100065</a>
                 <div style={{ fontSize: '0.75rem', color: '#64748B' }}>Mon - Sat: 9:00 AM - 9:00 PM</div>
               </div>
             </div>
@@ -110,7 +110,7 @@ export default function Footer({ onNavigate, onOpenDealerModal, onSelectCategory
             <div className="footer-contact-item">
               <MapPin size={16} color="#F59E0B" style={{ marginTop: '3px' }} />
               <div>
-                <span style={{ color: '#CBD5E1', fontSize: '0.85rem' }}>Main University Road, Near Gulabad Stop, Peshawar, Khyber Pakhtunkhwa</span>
+                <span style={{ color: '#CBD5E1', fontSize: '0.85rem' }}>Small Industrial Estate, Kohat Road, Peshawar</span>
               </div>
             </div>
 

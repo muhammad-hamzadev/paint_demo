@@ -92,8 +92,8 @@ export default function ContactPage({ onOpenDealerModal }) {
             </div>
             <div>
               <h4 className="text-xs font-extrabold uppercase text-slate-400">Customer Helpline & WhatsApp</h4>
-              <a href="tel:+923001234567" className="text-lg font-black text-slate-900 hover:text-brand-navy block mt-1">
-                +92 300 1234567
+              <a href="tel:03306100065" className="text-lg font-black text-slate-900 hover:text-brand-navy block mt-1">
+                03306100065
               </a>
               <p className="text-xs text-slate-500 mt-1">Mon - Sat: 9:00 AM - 9:00 PM</p>
             </div>
@@ -104,9 +104,9 @@ export default function ContactPage({ onOpenDealerModal }) {
               <Building2 className="w-6 h-6" />
             </div>
             <div>
-              <h4 className="text-xs font-extrabold uppercase text-slate-400">Main Experience Center & Outlet</h4>
+              <h4 className="text-xs font-extrabold uppercase text-slate-400">Main Factory & Outlet</h4>
               <p className="text-sm font-extrabold text-slate-900 mt-1">
-                Main University Road, Near Gulabad Stop, Peshawar, Khyber Pakhtunkhwa
+                Small Industrial Estate, Kohat Road, Peshawar
               </p>
             </div>
           </div>
@@ -124,9 +124,9 @@ export default function ContactPage({ onOpenDealerModal }) {
             <span className="bg-white/15 backdrop-blur-md border border-white/20 px-3.5 py-1 rounded-full text-xs font-extrabold uppercase tracking-widest text-amber-300">
               Peshawar Flagship Branch
             </span>
-            <h3 className="text-3xl font-extrabold text-white drop-shadow-md">Locate ZIK Paints Main Outlet</h3>
+            <h3 className="text-3xl font-extrabold text-white drop-shadow-md">Locate ZIK Paint Industry Main Outlet</h3>
             <p className="text-slate-200 text-sm max-w-xl">
-              Visit our flagship experience center and main outlet on Main University Road, Peshawar to view live shade cards and make purchases.
+              Visit our factory outlet at Small Industrial Estate, Kohat Road, Peshawar to view live shade cards and make purchases.
             </p>
           </div>
 
